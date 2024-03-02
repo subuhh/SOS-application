@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sos_system/Favorites.dart';
 import 'package:sos_system/RedeemPoints.dart';
 import 'package:sos_system/RewardPoints.dart';
 import 'contacts.dart';
@@ -30,12 +31,11 @@ class _HomePageState extends State<HomePage> {
             Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Contacts() ));
             },),
             ListTile(title: Text("Favorites Contacts"),onTap: (){
-
+              Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Favorite()));
             },),
             ListTile(title: Text("Rewards"),onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints( ) ));
             },),
-
           ],
         ),
       ),

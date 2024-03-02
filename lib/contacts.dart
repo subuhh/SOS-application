@@ -21,36 +21,36 @@ class _ContactsState extends State<Contacts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Contacts"),
+        title: Text("Contacts",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
         centerTitle: true,
-        backgroundColor: AColors.primaryColor1,
+        backgroundColor:Color.fromARGB(255, 135, 4,4),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             padding: EdgeInsets.only(top: 10.0, left: 16.0, right: 16.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Contacts",
-                    style: TextStyle(fontSize: 30, color: Colors.black),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=>Favorite()));
-                  },
-                  child: Text(
-                    "Favorites",
-                    style: TextStyle(fontSize: 30, color: Colors.black),
-                  ),
-                ),
-              ],
-            ),
+            // child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     TextButton(
+            //       onPressed: () {},
+            //       child: Text(
+            //         "Contacts",
+            //         style: TextStyle(fontSize: 30, color: Colors.black),
+            //       ),
+            //     ),
+            //     TextButton(
+            //       onPressed: () {
+            //         Navigator.push(context, MaterialPageRoute(builder:(context)=>Favorite()));
+            //       },
+            //       child: Text(
+            //         "Favorites",
+            //         style: TextStyle(fontSize: 30, color: Colors.black),
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ),
           SizedBox(
             height: 10,
@@ -87,11 +87,11 @@ class _ContactsState extends State<Contacts> {
                               // Toggle selection on tap
                             },
                             onLongPress: () {
-                              // Add contact to selected list on long press
+                              // Add contact to selected   list on long press
                             },
                             leading: const CircleAvatar(
                               radius: 20,
-                              child: Icon(Icons.person),
+                              child: Icon(Icons.person,color: Color.fromARGB(255, 135, 4,4)),
                             ),
                             title: Text(contact.displayName),
                             trailing: IconButton(

@@ -22,7 +22,9 @@ class _FavoriteState extends State<Favorite> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorite Contacts'),
+        title: Text('Favorite Contacts',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 135, 4,4)
       ),
       body: ListView.builder(
         itemCount: favoriteContacts.length,
