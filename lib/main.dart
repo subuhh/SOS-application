@@ -12,7 +12,6 @@ var firebaseOptions = FirebaseOptions(
 );
 void main() async {
   //initializeBox();
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: firebaseOptions);
   await Hive.initFlutter();

@@ -18,9 +18,12 @@ class RewardPoints extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Reward Points'),
+        title: Text('Reward Points',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
         centerTitle: true,
-
+        backgroundColor:Color.fromARGB(255, 135, 4,4),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(

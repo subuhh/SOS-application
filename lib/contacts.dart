@@ -24,6 +24,9 @@ class _ContactsState extends State<Contacts> {
         title: Text("Contacts",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor:Color.fromARGB(255, 135, 4,4),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

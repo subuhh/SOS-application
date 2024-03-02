@@ -51,24 +51,20 @@ class _SplashscreenState extends State<Splashscreen> {
                   color: Color.fromARGB(255, 254, 254, 254),
                 ),
               ),
+              // Text(
+              //   '____________________________',
+              //   style: TextStyle(
+              //       fontWeight: FontWeight.normal, color: Colors.black12),
+              // ),
               Text(
-                '____________________________',
+                'You are enough to handle the Problem',
                 style: TextStyle(
-                    fontWeight: FontWeight.normal, color: Colors.black12),
-              ),
-              Text(
-                'soch ke likhenge',
-                style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 14,
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 252, 252, 252),
                 ),
               ),
-              Text(
-                '______________',
-                style: TextStyle(
-                    fontWeight: FontWeight.normal, color: Color.fromARGB(31, 255, 255, 255)),
-              )
+
             ],
           ),
         ),

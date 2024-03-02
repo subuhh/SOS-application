@@ -24,7 +24,10 @@ class _FavoriteState extends State<Favorite> {
       appBar: AppBar(
         title: Text('Favorite Contacts',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 135, 4,4)
+        backgroundColor: Color.fromARGB(255, 135, 4,4),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
       ),
       body: ListView.builder(
         itemCount: favoriteContacts.length,
