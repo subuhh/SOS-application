@@ -31,16 +31,15 @@ class _HomePageState extends State<HomePage> {
             Text("UserName",textAlign: TextAlign.center,style: TextStyle(fontSize: 25,color: Colors.white),),
             SizedBox(height: 10,),
             ListTile(title: Text("Contacts",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Contacts() ));
+            Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Contacts()));
             },),
             ListTile(title: Text("Favorites Contacts",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Favorite()));
             },),
             ListTile(title: Text("Rewards",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints( ) ));
+              Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints()));
             },),
             ListTile(title: Text("Other emergencies",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
-
             },),
             ListTile(title: Text("Sign Out",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
               FirebaseAuth.instance.signOut().then((value) {
