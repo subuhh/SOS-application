@@ -18,21 +18,21 @@ class otherEmergencies extends StatelessWidget {
               end: Alignment.bottomCenter,
             ),
           ),
-          padding: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(5.0),
           child: GridView.count(
             crossAxisCount: 2,
-            crossAxisSpacing: 20.0,
-            mainAxisSpacing: 20.0,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 10.0,
             children: [
               Card(
                 child: Column(
                   children: [
                     Container(
-                      height: 180, // Set the height of the container to control the size
+                      height: 150, // Set the height of the container to control the size
                       width: 200,  // Set the width of the container to control the size
                       child: Lottie.asset('lib/Assets/Firebrigade.json'),
                     ),
-                    Text('Call Firebrigade')
+                    Text('Call Firebrigade',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
                   ],
                 ),
               ),
@@ -40,12 +40,11 @@ class otherEmergencies extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      height: 180, // Set the height of the container to control the size
+                      height: 150, // Set the height of the container to control the size
                       width: 200,  // Set the width of the container to control the size
                       child: Lottie.asset('lib/Assets/Police.json'),
                     ),
-                    //SizedBox(height: 10,),
-                    Text('Call Police')
+                    Text('Call Police',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
                   ],
                 ),
               ),
@@ -53,12 +52,11 @@ class otherEmergencies extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      height: 180, // Set the height of the container to control the size
+                      height: 150, // Set the height of the container to control the size
                       width: 180,  // Set the width of the container to control the size
                       child: Lottie.asset('lib/Assets/Blood.json'),
                     ),
-                    SizedBox(height: 10,),
-                    Text('Need blood')
+                    Text('Need blood',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
                   ],
                 ),
               ),
@@ -66,11 +64,11 @@ class otherEmergencies extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      height: 180, // Set the height of the container to control the size
+                      height: 150, // Set the height of the container to control the size
                       width: 200,  // Set the width of the container to control the size
                       child: Lottie.asset('lib/Assets/Ambulance.json'),
                     ),
-                    Text('Call Ambulance')
+                    Text('Call Ambulance',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),)
                   ],
                 ),
               ),
