@@ -1,9 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sos_system/Favorites.dart';
 import 'package:sos_system/RedeemPoints.dart';
 import 'package:sos_system/RewardPoints.dart';
+import 'package:sos_system/screens/signin_screen.dart';
 import 'contacts.dart';
 import 'widgets/SoSbutton.dart';
 
@@ -19,22 +21,34 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
+        backgroundColor: Color(0xFF710000),
         child: ListView(
           children: [
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Icon(Icons.account_circle,size: 200,),
+              child: Icon(Icons.account_circle,size: 200,color: Colors.white,),
             ),
-            Text("UserName",textAlign: TextAlign.center,style: TextStyle(fontSize: 25),),
+            Text("UserName",textAlign: TextAlign.center,style: TextStyle(fontSize: 25,color: Colors.white),),
             SizedBox(height: 10,),
-            ListTile(title: Text("Emergency Contacts"),onTap: (){
+            ListTile(title: Text("Contacts",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
             Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Contacts() ));
             },),
-            ListTile(title: Text("Favorites Contacts"),onTap: (){
+            ListTile(title: Text("Favorites Contacts",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Favorite()));
             },),
-            ListTile(title: Text("Rewards"),onTap: (){
+            ListTile(title: Text("Rewards",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints( ) ));
+            },),
+            ListTile(title: Text("Other emergencies",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
+
+            },),
+            ListTile(title: Text("Sign Out",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
+              FirebaseAuth.instance.signOut().then((value) {
+                print("Signed Out");
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignInScreen()));
+              });
+
             },),
           ],
         ),
@@ -74,19 +88,6 @@ class _HomePageState extends State<HomePage> {
               
                 children: [
                   SOSButton(),
-                  // Container(
-                  //   width: 150.0,
-                  //   height: 150.0,
-                  //   decoration: BoxDecoration(
-                  //     color:  Colors.transparent,
-                  //     borderRadius: BorderRadius.all( Radius.circular(1100.0)),
-                  //     border: Border.all(
-                  //       color: Colors.white,
-                  //       width: 7.0,
-                  //     ),
-                  //   ),
-                  //   child: Center(child: Text('SOS',style: TextStyle(fontSize: 40,color: Colors.white,fontWeight: FontWeight.bold),)),
-                  // ),
                   SizedBox(height: 40,),
                   Text("Hold button for 3 seconds \nif you are into any Danger",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,),textAlign: TextAlign.center,),
                 ],
