@@ -27,12 +27,12 @@ class _HomePageState extends State<HomePage> {
             Text("UserName",textAlign: TextAlign.center,style: TextStyle(fontSize: 25),),
             SizedBox(height: 10,),
             ListTile(title: Text("Emergency Contacts"),onTap: (){
-
             Navigator.push(context, MaterialPageRoute(builder:(ctx)=>Contacts() ));
             },),
-            ListTile(title: Text("Emergency Message"),onTap: (){},),
-            ListTile(title: Text("Rewards"),onTap: (){
+            ListTile(title: Text("Favorites Contacts"),onTap: (){
 
+            },),
+            ListTile(title: Text("Rewards"),onTap: (){
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints( ) ));
             },),
 

@@ -2,7 +2,6 @@ import 'package:fast_contacts/fast_contacts.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:permission_handler/permission_handler.dart';
-
 import 'Favorites.dart';
 import 'utils/colors.dart';
 
