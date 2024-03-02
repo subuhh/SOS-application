@@ -4,7 +4,7 @@ import 'RedeemPoints.dart';
 class RewardPoints extends StatelessWidget {
   RewardPoints({Key? key}) : super(key: key);
 
-  final int currentPoints = 1000;
+  final int currentPoints = 1220;
   final List<String> cardNames = ['FlipKart', 'Amazon', 'Myntra', 'Ajio', 'Meesho'];
   final List<String> cardLogos = [
     'lib/Assets/logos/Flipcart_Logo.jpeg',
@@ -19,7 +19,8 @@ class RewardPoints extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Reward Points'),
-        leading: Icon(Icons.person),
+        centerTitle: true,
+
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -39,8 +40,8 @@ class RewardPoints extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(20, 50, 20, 50),
               child: Center(
                 child: Text(
-                  'Reward Points: $currentPoints',
-                  style: TextStyle(fontSize: 40),
+                  'Total Points: $currentPoints',
+                  style: TextStyle(fontSize: 30,color: Colors.white),
                 ),
               ),
             ),
@@ -55,7 +56,7 @@ class RewardPoints extends StatelessWidget {
                         5,
                             (index) => SizedBox(
                           height: 200,
-                          width: 600,
+                          width: 400,
                           child: Card(
                             color: Colors.white,
                             child: InkWell(
@@ -89,7 +90,7 @@ class RewardPoints extends StatelessWidget {
                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                       children: [
                                                         Text(
-                                                          'Gift Card Valued at \nRs 500 or 30% off at\n ${cardNames[index % cardNames.length]}',
+                                                          'Gift Card Valued at \nRs 500 or 30% off at\n ${cardNames[index % cardNames.length] }',style: TextStyle(fontSize: 14),
                                                         ),
                                                       ],
                                                     ),
