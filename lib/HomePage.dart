@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:sos_system/Favorites.dart';
 import 'package:sos_system/RedeemPoints.dart';
 import 'package:sos_system/RewardPoints.dart';
+import 'package:sos_system/otherEmergencies.dart';
 import 'package:sos_system/screens/signin_screen.dart';
 import 'contacts.dart';
 import 'widgets/SoSbutton.dart';
@@ -40,6 +41,7 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(context, MaterialPageRoute(builder:(ctx)=>RewardPoints()));
             },),
             ListTile(title: Text("Other emergencies",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder:(ctx)=>otherEmergencies()));
             },),
             ListTile(title: Text("Sign Out",style: TextStyle(fontSize: 25,color: Colors.white),),onTap: (){
               FirebaseAuth.instance.signOut().then((value) {
