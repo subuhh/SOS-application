@@ -111,7 +111,7 @@ class _ContactsState extends State<Contacts> {
                                   box.add(favoriteContact.toJson());
                                   final snackbar = SnackBar(
                                     content: Text("Added Successfully"),
-                                    backgroundColor: Colors.blue,
+                                    backgroundColor: Colors.red,
                                   );
                                   ScaffoldMessenger.of(context).showSnackBar(snackbar);
                                 } else {
@@ -123,7 +123,7 @@ class _ContactsState extends State<Contacts> {
                                 }
                               },
                               icon: Icon(
-                                 Icons.favorite ,
+                                 Icons.favorite_border,
                                 color: Colors.red ,
                               ),
                             ),

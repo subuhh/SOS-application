@@ -25,6 +25,8 @@ class _SOSButtonState extends State<SOSButton> {
           try {
             await _shareLocationWithFavorites();
             // print("Successfully shared location with favorites");
+            final snackBar=SnackBar(content: Text("Your location has been Shared"),backgroundColor: Colors.red,);
+            ScaffoldMessenger.of(context).showSnackBar(snackBar);
           } catch (e) {
             print("Error sharing location: $e");
           }

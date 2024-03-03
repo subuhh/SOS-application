@@ -59,8 +59,8 @@ class _FavoriteState extends State<Favorite> {
       if (value is Map<String, dynamic>) { // Ensure the value is a Map<String, dynamic>
         FavoriteContact contact = FavoriteContact.fromJson(value);
         favoriteContacts.add(contact);
-      } else if (value is Map<dynamic, dynamic>) { // Handle the alternate map type
-        // Convert the dynamic map to Map<String, dynamic> if possible
+      } else if (value is Map<dynamic, dynamic>) {
+
         Map<String, dynamic> typedMap = value.cast<String, dynamic>();
         FavoriteContact contact = FavoriteContact.fromJson(typedMap);
         favoriteContacts.add(contact);

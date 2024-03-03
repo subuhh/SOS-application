@@ -6,9 +6,8 @@ class otherEmergencies extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Calculate dynamic padding based on screen height to center the grid items vertically
     final screenHeight = MediaQuery.of(context).size.height;
-    final topPadding = screenHeight * 0.2; // Adjust this value as needed
+    final topPadding = screenHeight * 0.2;
 
     return Scaffold(
       appBar: AppBar(
@@ -38,13 +37,13 @@ class otherEmergencies extends StatelessWidget {
               crossAxisSpacing: 10.0,
               mainAxisSpacing: 10.0,
               children: [
-                // Repeat this structure for each card you want to display
+
                 Card(
                   child: Column(
                     children: [
                       Container(
-                        height: 150, // Set the height of the container to control the size
-                        width: 200,  // Set the width of the container to control the size
+                        height: 150,
+                        width: 200,
                         child: Lottie.asset('lib/Assets/Firebrigade.json'),
                       ),
                       Text('Call Firebrigade',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
@@ -55,8 +54,8 @@ class otherEmergencies extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        height: 150, // Set the height of the container to control the size
-                        width: 200,  // Set the width of the container to control the size
+                        height: 150,
+                        width: 200,
                         child: Lottie.asset('lib/Assets/Police.json'),
                       ),
                       Text('Call Police',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
@@ -67,8 +66,8 @@ class otherEmergencies extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        height: 150, // Set the height of the container to control the size
-                        width: 180,  // Set the width of the container to control the size
+                        height: 150,
+                        width: 180,
                         child: Lottie.asset('lib/Assets/Blood.json'),
                       ),
                       Text('Need blood',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
@@ -79,15 +78,14 @@ class otherEmergencies extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        height: 150, // Set the height of the container to control the size
-                        width: 200,  // Set the width of the container to control the size
+                        height: 150,
+                        width: 200,
                         child: Lottie.asset('lib/Assets/Ambulance.json'),
                       ),
                       Text('Call Ambulance',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 ),
-                // Add more cards here following the same structure
               ],
             ),
           ),
