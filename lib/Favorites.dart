@@ -66,7 +66,7 @@ class _FavoriteState extends State<Favorite> {
         favoriteContacts.add(contact);
       } else {
         print('Encountered unexpected data type: ${value.runtimeType}');
-        // Handle unexpected data type, if needed
+
       }
     }
 
@@ -77,20 +77,16 @@ class _FavoriteState extends State<Favorite> {
   void deleteContact(String contactName) async {
     final contactsBox = await Hive.openBox('favorites');
 
-    // Find the contact with the matching name
     final contactKey = contactsBox.keys.firstWhere((key) => contactsBox.get(key)['name'] == contactName);
 
     if (contactKey != null) {
-      // Delete the contact from the box
       await contactsBox.delete(contactKey);
       final snackBar=SnackBar(content: Text("Deleting.....Reopen the page"),backgroundColor: Colors.red,);
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
       setState(() {
         retrieveContacts();
-        // Retrieve the updated list of contacts
       });
     } else {
-      // Handle the case where the contact is not found
       print('Contact not found: $contactName');
     }
     await contactsBox.close();
@@ -102,7 +98,6 @@ class AnotherClass {
     // Open the Hive box
     final contactsBox = await Hive.openBox('favorites');
 
-    // Retrieve the list from the box
     List<FavoriteContact> favoriteContacts = contactsBox.values.toList().cast<FavoriteContact>();
 
     // Now you can use favoriteContacts list in this class

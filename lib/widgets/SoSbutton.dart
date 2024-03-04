@@ -49,7 +49,6 @@ Future<void> _shareLocationWithFavorites() async {
     // Get current location
     Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
 
-    // Open the Hive box
    if(!(await Permission.sms.request().isGranted)){
      print('Sms Permission not granted');
      return ;
@@ -72,7 +71,7 @@ Future<void> _shareLocationWithFavorites() async {
           print("IN 1");
           print("I am in <String, dynamic>");
           print('Value is a map: $value');
-          if (value.containsKey('name')) { // Ensure 'name' key exists
+          if (value.containsKey('name')) {
             print('Value contains key "name": ${value['name']}');
             FavoriteContact contact = FavoriteContact.fromJson(value);
             print('Favorite contact name: ${contact
@@ -97,8 +96,7 @@ Future<void> _shareLocationWithFavorites() async {
       }
     }
 
-    // Close the Hive box
-    // await contactsBox.close();
+
   } catch (e) {
     print("Error sharing location: $e");
     // Handle error

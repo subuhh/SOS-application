@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sos_system/screens/BloodNeed.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class otherEmergencies extends StatelessWidget {
   const otherEmergencies({Key? key}) : super(key: key);
@@ -37,7 +39,6 @@ class otherEmergencies extends StatelessWidget {
               crossAxisSpacing: 10.0,
               mainAxisSpacing: 10.0,
               children: [
-
                 Card(
                   child: Column(
                     children: [
@@ -62,16 +63,24 @@ class otherEmergencies extends StatelessWidget {
                     ],
                   ),
                 ),
-                Card(
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 150,
-                        width: 180,
-                        child: Lottie.asset('lib/Assets/Blood.json'),
-                      ),
-                      Text('Need blood',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
-                    ],
+                InkWell(
+                  onTap :(){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BloodNeeded()),
+                    );
+                },
+                  child: Card(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 150,
+                          width: 180,
+                          child: Lottie.asset('lib/Assets/Blood.json'),
+                        ),
+                        Text('Need blood',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
+                      ],
+                    ),
                   ),
                 ),
                 Card(

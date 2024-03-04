@@ -84,12 +84,10 @@ class _HomePageState extends State<HomePage> {
             )),
             Expanded(
               child: Column(
-              
                 mainAxisAlignment: MainAxisAlignment.center,
-              
                 children: [
                   SOSButton(),
-                  SizedBox(height: 40,),
+                  SizedBox(height : 40,),
                   Text("Hold button for 3 seconds \nif you are into any Danger",style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold,),textAlign: TextAlign.center,),
                 ],
               ),

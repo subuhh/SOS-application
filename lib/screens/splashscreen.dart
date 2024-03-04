@@ -2,6 +2,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:sos_system/HomePage.dart';
+import 'package:sos_system/screens/BloodNeed.dart';
+import 'package:sos_system/screens/homescreen.dart';
 import 'package:sos_system/screens/signin_screen.dart';
 
 class Splashscreen extends StatefulWidget {
@@ -16,10 +19,10 @@ class _SplashscreenState extends State<Splashscreen> {
  void initState() {
     super.initState();
     //initializeBox();
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds:3), () {
       Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
+           context,
+           MaterialPageRoute(
             builder: (context) => SignInScreen(),
           ));
     });

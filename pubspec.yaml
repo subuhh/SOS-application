@@ -53,6 +53,7 @@ dependencies:
   permission_handler: ^11.3.0
   mek_data_class_generator: ^1.5.1
   telephony_sms: ^0.0.4
+  flutter_contacts: ^1.1.7+1
 
 dev_dependencies:
   flutter_test:
